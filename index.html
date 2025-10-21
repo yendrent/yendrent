@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Yendrent6dad Stream</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
       margin: 0;
@@ -11,16 +12,29 @@
       overflow: hidden;
       background: black;
       height: 100%;
+      width: 100%;
     }
-    iframe {
+    #streamContainer {
+      position: absolute;
+      top: 0; left: 0;
       width: 100vw;
       height: 100vh;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
       border: none;
     }
   </style>
 </head>
 <body>
-  <!-- Replace YOUR_RTMP_EMBED_LINK with your actual stream link -->
-  <iframe src="https://player.twitch.tv/?channel=yourchannel&parent=localhost" allowfullscreen></iframe>
+  <div id="streamContainer">
+    <!-- VDO.Ninja private room embed -->
+    <iframe 
+      src="https://vdo.ninja/?room=x9p3vault&audio=true&video=true&hidebrand=true&profile=ultra&aspect=9:16" 
+      allow="autoplay; fullscreen; microphone; camera" 
+      allowfullscreen>
+    </iframe>
+  </div>
 </body>
 </html>
